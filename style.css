@@ -1,0 +1,20 @@
+:root{--bg:#EEF2F5;--ink:#14273A;--muted:#4D6275;--accent:#2F6F8F;--rule:#C9D4DD;--b1:#9C6B6B;--b2:#A8875A;--b3:#7D9466;--b4:#5E8AA0;--b5:#7A6E9C;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1C28;--ink:#E3EAF0;--muted:#9AAFC0;--accent:#7FB8D4;--rule:#2A3D4F;--b1:#C48E8E;--b2:#CDAE7E;--b3:#A3BB8A;--b4:#86B2C8;--b5:#A498C4;color-scheme:dark}}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:38rem;margin:0 auto;padding:3.5rem 1.5rem 4rem}
+.bridge{display:block;width:100%;max-width:22rem;height:auto;margin:0 0 1.5rem}
+.bridge path{fill:none;stroke-width:3;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.6s ease-out forwards}
+.bridge path:nth-child(2){animation-delay:.08s}.bridge path:nth-child(3){animation-delay:.16s}.bridge path:nth-child(4){animation-delay:.24s}.bridge path:nth-child(5){animation-delay:.32s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.bridge path{animation:none;stroke-dashoffset:0}}
+h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,9vw,3.75rem);line-height:1.05;letter-spacing:-.01em;margin:0 0 .75rem}
+.lead{font-size:1.25rem;line-height:1.5;color:var(--muted);margin:0 0 3rem;max-width:32rem}
+h2{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;font-size:1.375rem;line-height:1.25;margin:2.5rem 0 .5rem}
+p,ul{margin:0 0 1rem}ul{padding-left:1.25rem}li{margin:.25rem 0}
+a{color:var(--accent);text-underline-offset:.18em}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.en{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--rule);color:var(--muted)}
+.en h2{margin-top:0;color:var(--ink)}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.9375rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
